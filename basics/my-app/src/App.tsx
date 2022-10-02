@@ -1,13 +1,9 @@
 import React from "react";
-import ExpenseItem from "./components/ExpenseItem";
 import { expenses } from "./data";
+import Expenses from "./components/Expenses";
 
 function App(): JSX.Element {
-  return (
-    <div className="app">
-      <ExpenseItem expense={expenses[0]} />
-    </div>
-  );
+  return <Expenses expensesList={expenses} />;
 }
 
 export default App;
