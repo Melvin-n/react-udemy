@@ -44,6 +44,7 @@ class Worker {
 
 //spread & rest
 //spread: split up array elements OR object properties
+// NOTE: spread also eliminates pointer copies and creates real copies
 const letters = ['i', 'g', 'h']
 const moreLetters = [...letters, 'l', 'm', 'n']
 
@@ -62,12 +63,9 @@ const maxWithJob: TEmployee = {
 const filter = (...args: number[]): number[] => {
     return args.filter(element => element === 1)
 }
-
-console.log(filter(1, 2, 3, 4, 1))
-
-
+//can pass as many arguments and they are merged into an array
+console.log(filter(1, 2, 3, 4, 1)) // 1, 1
 
 
 
-//classes
 
