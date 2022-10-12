@@ -2,6 +2,7 @@ import React from "react";
 import TExpense from "../types";
 import ExpenseItem from "./ExpenseItem";
 import "../styles/Expenses.css";
+import Card from "./Card";
 
 interface TExpensesArrayProp {
   expensesList: TExpense[];
@@ -9,11 +10,11 @@ interface TExpensesArrayProp {
 
 const Expenses = ({ expensesList }: TExpensesArrayProp): JSX.Element => {
   return (
-    <div className="expenses">
+    <Card className="expenses">
       {expensesList.map((expenseItem) => (
         <ExpenseItem expense={expenseItem} />
       ))}
-    </div>
+    </Card>
   );
 };
 
